@@ -17,11 +17,11 @@ public class CollectableMove : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.gameObject.CompareTag(shipTag))
-        //{
-        //    HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
-        //    effected.GenerateShield();
-        //}
+        if (other.gameObject.CompareTag(shipTag))
+        {
+            HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
+            effected.GenerateShield();
+        }
     }
 
     private void FixedUpdate()

@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockMoveDamage : MonoBehaviour
 {
     [SerializeField] private string shipTag;
-    [SerializeField] private float directDamageAmount;
+    [SerializeField] private int directDamageAmount;
 
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
@@ -18,11 +18,11 @@ public class RockMoveDamage : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.gameObject.CompareTag(shipTag))
-        //{
-        //    HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
-        //    effected.DealDamage(directDamageAmount);
-        //}
+        if (other.gameObject.CompareTag(shipTag))
+        {
+            HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
+            effected.DealDamage(directDamageAmount);
+        }
     }
 
     private void FixedUpdate()
