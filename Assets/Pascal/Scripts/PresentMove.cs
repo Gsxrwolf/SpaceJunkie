@@ -62,7 +62,8 @@ public class PresentMove : MonoBehaviour
             }
             rigitBody.AddForce(direction * velocity);
         }
-        Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpacialDirection();
+        Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpaceshipDirection();
+        slidingForce.y = 0;
         rigitBody.AddForce(slidingForce * slidingForceMultiplier);
     }
 }
