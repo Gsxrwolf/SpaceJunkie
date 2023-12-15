@@ -6,9 +6,9 @@ using UnityEngine;
 public class LoadedCalculator : MonoBehaviour
 {
     private GameObject[] LoadedObjects;
-    Vector2 CalculatedSpaceshipDirection;
-    float CalculatedMassLeftSide;
-    float CalculatedMassRightSide;
+    private Vector2 CalculatedSpaceshipDirection;
+    private float CalculatedMassLeftSide;
+    private float CalculatedMassRightSide;
     
     [SerializeField] private float SpaceshipWidth = 10.0f;
     
