@@ -5,13 +5,26 @@ using UnityEngine;
 
 public class LoadedCalculator : MonoBehaviour
 {
+    public static LoadedCalculator Instance { get; private set; }
+    
     private GameObject[] LoadedObjects;
     private Vector2 CalculatedSpaceshipDirection;
     private float CalculatedMassLeftSide;
     private float CalculatedMassRightSide;
     
     [SerializeField] private float SpaceshipWidth = 10.0f;
-    
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
