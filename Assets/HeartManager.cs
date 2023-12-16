@@ -23,7 +23,7 @@ public class HeartManager : MonoBehaviour
         int health = GameManager.Instance.GetPlayerHealth();
         bool shield = GameManager.Instance.GetPlayerShield();
 
-        this.ShieldContainer.visible = !shield;
+        this.ShieldContainer.visible = shield;
 
         switch (health)
         {
