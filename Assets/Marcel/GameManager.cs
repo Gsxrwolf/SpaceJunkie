@@ -41,11 +41,12 @@ public class GameManager : MonoBehaviour
             this.PlayerShield = true;
             this.PlayerScore = 0;
         }
-        if(_level == 2)
-        {
-            scoreBuffer.Add(PlayerScore);
-            PlayerScore = 0;
-        }
+    }
+
+    public void ResetPlayerScore()
+    {
+        scoreBuffer.Add(PlayerScore);
+        PlayerScore = 0;
     }
 
     private void FixedUpdate()
