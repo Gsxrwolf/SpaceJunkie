@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class ObsticalPoolManager : MonoBehaviour
 {
-    public static ObsticalPoolManager Instance { get; private set; }
-    private void Awake()
-    {
-        if (Instance is not null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-    }
 
     System.Random rnd = new System.Random();
 
@@ -24,7 +13,7 @@ public class ObsticalPoolManager : MonoBehaviour
     private int indexPointerRocks = 0;
     [SerializeField] private List<GameObject> powerups = new List<GameObject>();
     private int indexPointerPowerups = 0;
-    [SerializeField] private Vector2 hiddenPoolPoint;
+    [SerializeField] private static Vector2 hiddenPoolPoint;
     [SerializeField] private GameObject plane;
     [SerializeField] private int spawnXRange;
     [SerializeField] private int spawnYOffset;
@@ -120,7 +109,7 @@ public class ObsticalPoolManager : MonoBehaviour
         #endregion
     }
 
-    public void MoveToHiddenPoint(GameObject _gameobj)
+    public static void MoveToHiddenPoint(GameObject _gameobj)
     {
         _gameobj.transform.position = hiddenPoolPoint;
         _gameobj.SetActive(false);

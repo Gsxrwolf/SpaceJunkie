@@ -18,6 +18,11 @@ public class PresentMove : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float slidingForceMultiplier;
 
+    [SerializeField] private AudioSource pickUpSound;
+    [SerializeField] private AudioSource dropSound;
+    [SerializeField] private AudioSource dragSound;
+
+
     private void Start()
     {
         grabCollider = GetComponent<Collider2D>();
@@ -27,6 +32,13 @@ public class PresentMove : MonoBehaviour
     {
         if (isDragging)
         {
+
+            if (!dragSound.isPlaying)
+            {
+                Debug.Log(dragSound.isPlaying);
+            }
+
+            rigitBody.drag = 1;
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePos - transform.position).normalized;
             distance = Vector2.Distance(transform.position, mousePos);
@@ -39,6 +51,7 @@ public class PresentMove : MonoBehaviour
         }
         if (!isDragging)
         {
+            rigitBody.drag = 2;
             Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpaceshipDirection();
             slidingForce.y = 0;
             rigitBody.AddForce(slidingForce * slidingForceMultiplier);
@@ -47,7 +60,7 @@ public class PresentMove : MonoBehaviour
 
     public void MouseButtonPress(InputAction.CallbackContext _input)
     {
-        if (_input.performed)
+        if (_input.started)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Collider2D hitCollider = Physics2D.OverlapPoint(mousePos);
@@ -56,8 +69,9 @@ public class PresentMove : MonoBehaviour
             {
                 if (hitCollider == grabCollider)
                 {
-                    Debug.Log("started");
+                    pickUpSound.Play();
                     isDragging = true;
+                    dragSound.Play();
                 }
             }
         }
@@ -65,8 +79,9 @@ public class PresentMove : MonoBehaviour
         {
             if(isDragging)
             {
-                Debug.Log("cancled");
+                dragSound.Stop();
                 isDragging = false;
+                dropSound.Play();
             }
         }
 

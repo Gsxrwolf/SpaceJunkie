@@ -10,6 +10,8 @@ public class CollectableMove : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float sliderMultiplier;
 
+    [SerializeField] private AudioSource collectableSound;
+
     private Rigidbody2D rigitbody;
 
     private void Start()
@@ -20,9 +22,10 @@ public class CollectableMove : MonoBehaviour
     {
         if (other.gameObject.CompareTag(shipTag))
         {
+            collectableSound.Play();
             HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
             effected.GenerateShield();
-            ObsticalPoolManager.Instance.MoveToHiddenPoint(this.gameObject);
+            ObsticalPoolManager.MoveToHiddenPoint(this.gameObject);
         }
     }
 

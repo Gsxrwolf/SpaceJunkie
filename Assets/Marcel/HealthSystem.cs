@@ -8,9 +8,18 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private int Health = 3;
     private bool ShieldActive = false;
 
+    [SerializeField] private AudioSource explosionSound;
+
+    private void Awake()
+    {
+        GameManager.Instance.SetPlayerShield(this.ShieldActive);
+        GameManager.Instance.SetPlayerHealth(this.Health);
+    }
+
     public void GenerateShield()
     {
         this.ShieldActive = true;
+        GameManager.Instance.SetPlayerShield(this.ShieldActive);
     }
     
     public void DealDamage(int _damage)
@@ -18,6 +27,7 @@ public class HealthSystem : MonoBehaviour
         if (this.ShieldActive)
         {
             this.ShieldActive = false;
+            GameManager.Instance.SetPlayerShield(this.ShieldActive);
             return;
         }
 
@@ -26,30 +36,16 @@ public class HealthSystem : MonoBehaviour
         if (this.Health <= 0)
         {
             this.Health = 0;
-            SceneManager.LoadScene(2); // load death scene
+            explosionSound.Play();
+            Invoke("LoadDeathScene", 3);
         }
 
         GameManager.Instance.SetPlayerHealth(this.Health);
     }
-    
-    public void DealDamage()
+    void LoadDeathScene()
     {
-        if (this.ShieldActive)
-        {
-            this.ShieldActive = false;
-            return;
-        }
-
-        this.Health--;
-
-        if (this.Health <= 0) {
-            this.Health = 0;
-            SceneManager.LoadScene(2); // load death scene
-        }
-
-        GameManager.Instance.SetPlayerHealth(this.Health);
+        SceneManager.LoadScene(2); // load death scene
     }
-
     // 0 - MainMenu
     // 1 - MainGame
     // 2 - DeathScreen

@@ -38,8 +38,6 @@ public class GameManager : MonoBehaviour
         {
             this.GameLevel = true;
             this.PlayerHealth = 3;
-            this.PlayerShield = true;
-            this.PlayerScore = 0;
         }
     }
 

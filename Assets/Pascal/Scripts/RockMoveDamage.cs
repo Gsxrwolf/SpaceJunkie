@@ -11,6 +11,8 @@ public class RockMoveDamage : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float sliderMultiplier;
 
+    [SerializeField] private AudioSource hitSound;
+
     private Rigidbody2D rigitbody;
 
     private void Start()
@@ -21,9 +23,10 @@ public class RockMoveDamage : MonoBehaviour
     {
         if (other.gameObject.CompareTag(shipTag))
         {
+            hitSound.Play();
             HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
             effected.DealDamage(directDamageAmount);
-            ObsticalPoolManager.Instance.MoveToHiddenPoint(this.gameObject);
+            ObsticalPoolManager.MoveToHiddenPoint(this.gameObject);
         }
     }
 

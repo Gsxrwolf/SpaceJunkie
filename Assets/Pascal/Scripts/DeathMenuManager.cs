@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DeathMenuManager : MonoBehaviour
 {
@@ -11,5 +12,10 @@ public class DeathMenuManager : MonoBehaviour
     {
         scoreTextField.text = GameManager.Instance.GetPlayerScore().ToString();
         GameManager.Instance.ResetPlayerScore();
+    }
+
+    public void BackButton()
+    {
+        SceneManager.LoadScene(0);
     }
 }
