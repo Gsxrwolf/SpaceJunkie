@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.Rendering.ReloadAttribute;
 
 public class LoadedCalculator : MonoBehaviour
 {
@@ -35,7 +37,8 @@ public class LoadedCalculator : MonoBehaviour
     private void FixedUpdate()
     {
         CalculateDistribution();
-        CalculateSpaceShipDirection();
+        //CalculateSpaceShipDirection();
+        CalculateSpaceshipMassPoint();
     }
     
     private void CalculateDistribution()
@@ -51,7 +54,7 @@ public class LoadedCalculator : MonoBehaviour
             {
                 Rigidbody2D packageRigidbody = package.GetComponent<Rigidbody2D>();
                 float packageMass = packageRigidbody.mass;
-                float massCenterScale = direction.x / this.SpaceshipWidth;
+                float massCenterScale = Mathf.Abs(direction.x) / this.SpaceshipWidth;
                 this.CalculatedMassLeftSide += (packageMass * massCenterScale);
             }
             else
@@ -62,6 +65,28 @@ public class LoadedCalculator : MonoBehaviour
                 this.CalculatedMassRightSide += (packageMass * massCenterScale);
             }
         }
+    }
+
+    private void CalculateSpaceshipMassPoint()
+    {
+        float xPosition = 0.0f;
+
+        foreach (GameObject package in this.LoadedObjects)
+        {
+            Vector2 packagePosition = package.transform.position;
+            Vector2 spaceshipPosition = this.transform.position;
+
+            Vector2 direction = packagePosition - spaceshipPosition;
+
+            xPosition += direction.x;
+        }
+        xPosition /= this.SpaceshipWidth;
+
+        CalculatedSpaceshipDirection.x = xPosition;
+
+        Debug.Log(this.CalculatedSpaceshipDirection);
+        this.CalculatedMassLeftSide = 0.0f;
+        this.CalculatedMassRightSide = 0.0f;
     }
 
     private void CalculateSpaceShipDirection()
@@ -79,6 +104,10 @@ public class LoadedCalculator : MonoBehaviour
             difference = this.CalculatedMassRightSide / (this.CalculatedMassLeftSide + this.CalculatedMassRightSide);
             this.CalculatedSpaceshipDirection.x = difference;                
         }
+
+        Debug.Log(this.CalculatedSpaceshipDirection);
+        this.CalculatedMassLeftSide = 0.0f;
+        this.CalculatedMassRightSide = 0.0f;
     }
     
     public Vector2 GetCalculatedSpaceshipDirection()

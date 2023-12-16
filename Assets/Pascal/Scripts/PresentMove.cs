@@ -12,7 +12,6 @@ public class PresentMove : MonoBehaviour
     private float distance;
 
     private bool isDragging = false;
-    private bool isMousening = false;
 
     [SerializeField] private float speed;
     [SerializeField] private float maxSpeed;
@@ -28,24 +27,19 @@ public class PresentMove : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            isMousening = true;
-        }
-        if (isMousening)
-        {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-                if (hit.collider != null)
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+            if (hit.collider != null)
+            {
+                if (hit.collider == collider)
                 {
-                    if (hit.collider == collider)
-                    {
-                        isDragging = true;
-                        Debug.Log(isDragging);
-                    }
+                    isDragging = true;
+                    Debug.Log(isDragging);
                 }
+            }
         }
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
-            isMousening = false;
             isDragging = false;
         }
     }
@@ -53,6 +47,8 @@ public class PresentMove : MonoBehaviour
     {
         if (isDragging)
         {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
             Vector2 direction = (mousePos - transform.position).normalized;
             distance = Vector2.Distance(transform.position, mousePos) + 2;
             float velocity = distance * speed;
