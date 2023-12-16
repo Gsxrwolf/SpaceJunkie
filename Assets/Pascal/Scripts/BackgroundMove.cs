@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class BackgroundMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Vector2 moveDirection;
+    [SerializeField] private float moveSpeed;
 
-    // Update is called once per frame
-    void Update()
+    private Rigidbody rigitbody;
+    private void Start()
     {
-        
+        rigitbody = GetComponent<Rigidbody>();
+    }
+    private void FixedUpdate()
+    {
+        rigitbody.velocity = moveDirection.normalized * moveSpeed;
+        if(transform.position.x < -17)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y + 45);
+        }
     }
 }
