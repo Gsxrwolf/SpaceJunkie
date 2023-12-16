@@ -22,6 +22,14 @@ public class HealthSystem : MonoBehaviour
         }
 
         this.Health -= _damage;
+
+        if (this.Health <= 0)
+        {
+            this.Health = 0;
+            SceneManager.LoadScene(2); // load death scene
+        }
+
+        GameManager.Instance.SetPlayerHealth(this.Health);
     }
     
     public void DealDamage()
@@ -38,6 +46,8 @@ public class HealthSystem : MonoBehaviour
             this.Health = 0;
             SceneManager.LoadScene(2); // load death scene
         }
+
+        GameManager.Instance.SetPlayerHealth(this.Health);
     }
 
     // 0 - MainMenu
