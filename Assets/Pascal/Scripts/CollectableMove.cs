@@ -8,6 +8,7 @@ public class CollectableMove : MonoBehaviour
 
     [SerializeField] private Vector2 moveDirection;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float sliderMultiplier;
 
     private Rigidbody2D rigitbody;
 
@@ -27,6 +28,7 @@ public class CollectableMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        moveDirection.x = -GameManager.Instance.GetXValueOfSpaceship() * sliderMultiplier;
         rigitbody.velocity = moveDirection.normalized * moveSpeed;
     }
 }

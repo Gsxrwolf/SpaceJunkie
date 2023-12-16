@@ -94,5 +94,10 @@ public class GameManager : MonoBehaviour
         this.XValueOfSpaceship = _xValue;
     }
     
-    
+    public float GetXValueOfSpaceship()
+    {
+        return this.XValueOfSpaceship;
+    }
+
+
 }

@@ -71,7 +71,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterUfos = 0;
-            framesUntillSpawnUfos = rnd.Next(10 * 5, 15 * 5);
+            framesUntillSpawnUfos = rnd.Next(10 * 5, 20 * 5);
 
             MoveToSpawnPoint(ufos[indexPointerUfos]);
             indexPointerUfos++;
@@ -90,7 +90,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterRocks = 0;
-            framesUntillSpawnRocks = rnd.Next(9 * 5, 11 * 5);
+            framesUntillSpawnRocks = rnd.Next(9 * 5, 16 * 5);
 
             MoveToSpawnPoint(rocks[indexPointerRocks]);
             indexPointerRocks++;
@@ -109,7 +109,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterPowerups = 0;
-            framesUntillSpawnPowerups = rnd.Next(13 * 5, 18 * 5);
+            framesUntillSpawnPowerups = rnd.Next(13 * 5, 23 * 5);
 
 
             MoveToSpawnPoint(powerups[indexPointerPowerups]);
