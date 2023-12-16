@@ -220,12 +220,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 63362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &63366
 Rigidbody2D:
   serializedVersion: 4
@@ -2608,12 +2607,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 435339559}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &435339563
 Rigidbody2D:
   serializedVersion: 4
@@ -3484,12 +3482,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 812995180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &812995183
 Rigidbody2D:
   serializedVersion: 4
@@ -4541,12 +4538,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1193980277}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &1193980280
 Rigidbody2D:
   serializedVersion: 4
@@ -5641,12 +5637,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1352495152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &1352495156
 Rigidbody2D:
   serializedVersion: 4
@@ -8017,12 +8012,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1650382429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &1650382432
 Rigidbody2D:
   serializedVersion: 4
@@ -8819,12 +8813,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817163804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &1817163807
 Rigidbody2D:
   serializedVersion: 4
@@ -9865,12 +9858,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1941966689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &1941966692
 Rigidbody2D:
   serializedVersion: 4
@@ -11305,12 +11297,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2134223243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d843eff2eea40cf4eac1e0bfb6048f69, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e62a14cf2c7ec84392adc5a83140e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0}
-  moveSpeed: 0
-  rigitbody: {fileID: 0}
+  moveDirection: {x: 0, y: -1}
+  moveSpeed: 1
 --- !u!50 &2134223246
 Rigidbody2D:
   serializedVersion: 4
