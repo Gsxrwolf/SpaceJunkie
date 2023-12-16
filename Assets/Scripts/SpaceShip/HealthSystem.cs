@@ -10,6 +10,8 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private AudioSource explosionSound;
 
+    [SerializeField] private ShieldActivator ShieldActivator;
+    
     private void Awake()
     {
         GameManager.Instance.SetPlayerShield(this.ShieldActive);
@@ -18,7 +20,13 @@ public class HealthSystem : MonoBehaviour
 
     public void GenerateShield()
     {
+        this.ShieldActivator.EnableShield();
+    }
+    
+    public void SetShieldActive()
+    {
         this.ShieldActive = true;
+        
         GameManager.Instance.SetPlayerShield(this.ShieldActive);
     }
     
@@ -27,6 +35,7 @@ public class HealthSystem : MonoBehaviour
         if (this.ShieldActive)
         {
             this.ShieldActive = false;
+            this.ShieldActivator.DisableShield();
             GameManager.Instance.SetPlayerShield(this.ShieldActive);
             return;
         }
