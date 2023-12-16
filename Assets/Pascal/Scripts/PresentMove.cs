@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PresentMove : MonoBehaviour
@@ -25,19 +26,6 @@ public class PresentMove : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
-            if (hit.collider != null)
-            {
-                if (hit.collider == collider)
-                {
-                    isDragging = true;
-                    Debug.Log(isDragging);
-                }
-            }
-        }
         if (Input.GetMouseButtonUp(0))
         {
             isDragging = false;
@@ -58,8 +46,25 @@ public class PresentMove : MonoBehaviour
             }
             rigitBody.AddForce(direction * velocity);
         }
-        Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpaceshipDirection();
-        slidingForce.y = 0;
-        rigitBody.AddForce(slidingForce * slidingForceMultiplier);
+        if(!isDragging)
+        {
+            Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpaceshipDirection();
+            slidingForce.y = 0;
+            rigitBody.AddForce(slidingForce * slidingForceMultiplier);
+        }
+    }
+
+    public void MouseButtonPress(InputAction.CallbackContext _input)
+    {
+        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider == collider)
+            {
+                isDragging = true;
+            }
+        }
     }
 }
