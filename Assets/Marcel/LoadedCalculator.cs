@@ -84,7 +84,6 @@ public class LoadedCalculator : MonoBehaviour
 
         CalculatedSpaceshipDirection.x = xPosition;
 
-        Debug.Log(this.CalculatedSpaceshipDirection);
         this.CalculatedMassLeftSide = 0.0f;
         this.CalculatedMassRightSide = 0.0f;
 
