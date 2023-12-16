@@ -31,14 +31,14 @@ public class ObsticalPoolManager : MonoBehaviour
     [SerializeField] private int spawnXRange;
     [SerializeField] private int spawnYOffset;
 
-    private int frameCounterUfos;
-    private int framesUntillSpawnUfos;
+    [SerializeField] private int frameCounterUfos;
+    [SerializeField] private int framesUntillSpawnUfos;
 
-    private int frameCounterRocks;
-    private int framesUntillSpawnRocks;
+    [SerializeField] private int frameCounterRocks;
+    [SerializeField] private int framesUntillSpawnRocks;
 
-    private int frameCounterPowerups;
-    private int framesUntillSpawnPowerups;
+    [SerializeField] private int frameCounterPowerups;
+    [SerializeField] private int framesUntillSpawnPowerups;
 
     
     private void Start()
@@ -56,9 +56,9 @@ public class ObsticalPoolManager : MonoBehaviour
             MoveToHiddenPoint(powerup);
         }
 
-        framesUntillSpawnUfos = rnd.Next(2 * 5, 5 * 5);
-        framesUntillSpawnRocks = rnd.Next(2 * 5, 4 * 5);
-        framesUntillSpawnPowerups = rnd.Next(3 * 5, 5 * 5);
+        framesUntillSpawnUfos = rnd.Next(1 * 50, 3 * 50);
+        framesUntillSpawnRocks = rnd.Next(1 * 50, 3 * 50);
+        framesUntillSpawnPowerups = rnd.Next(3 * 50, 5 * 50);
     }
 
     private void FixedUpdate()
@@ -71,7 +71,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterUfos = 0;
-            framesUntillSpawnUfos = rnd.Next(10 * 5, 20 * 5);
+            framesUntillSpawnUfos = rnd.Next(5 * 50, 15 * 50);
 
             MoveToSpawnPoint(ufos[indexPointerUfos]);
             indexPointerUfos++;
@@ -90,7 +90,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterRocks = 0;
-            framesUntillSpawnRocks = rnd.Next(9 * 5, 16 * 5);
+            framesUntillSpawnRocks = rnd.Next(5 * 50, 10 * 50);
 
             MoveToSpawnPoint(rocks[indexPointerRocks]);
             indexPointerRocks++;
@@ -109,7 +109,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterPowerups = 0;
-            framesUntillSpawnPowerups = rnd.Next(13 * 5, 23 * 5);
+            framesUntillSpawnPowerups = rnd.Next(10 * 50, 15 * 50);
 
 
             MoveToSpawnPoint(powerups[indexPointerPowerups]);
