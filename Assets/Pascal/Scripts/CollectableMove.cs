@@ -21,11 +21,12 @@ public class CollectableMove : MonoBehaviour
         {
             HealthSystem effected = other.gameObject.GetComponent<HealthSystem>();
             effected.GenerateShield();
+            ObsticalPoolManager.Instance.MoveToHiddenPoint(this.gameObject);
         }
     }
 
     private void FixedUpdate()
     {
-        rigitbody.AddForce(moveDirection.normalized * moveSpeed);
+        rigitbody.velocity = moveDirection.normalized * moveSpeed;
     }
 }

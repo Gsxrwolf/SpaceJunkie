@@ -15,6 +15,7 @@ public class ObsticalPoolManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
     }
 
     System.Random rnd = new System.Random();
@@ -39,6 +40,7 @@ public class ObsticalPoolManager : MonoBehaviour
     private int frameCounterPowerups;
     private int framesUntillSpawnPowerups;
 
+    
     private void Start()
     {
         foreach (GameObject rock in rocks)
@@ -53,9 +55,10 @@ public class ObsticalPoolManager : MonoBehaviour
         {
             MoveToHiddenPoint(powerup);
         }
+
         framesUntillSpawnUfos = rnd.Next(2 * 5, 5 * 5);
-        framesUntillSpawnRocks = rnd.Next(2 * 5, 5 * 5);
-        framesUntillSpawnPowerups = rnd.Next(2 * 5, 5 * 5);
+        framesUntillSpawnRocks = rnd.Next(2 * 5, 4 * 5);
+        framesUntillSpawnPowerups = rnd.Next(3 * 5, 5 * 5);
     }
 
     private void FixedUpdate()
@@ -68,7 +71,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterUfos = 0;
-            framesUntillSpawnUfos = rnd.Next(2 * 5, 5 * 5);
+            framesUntillSpawnUfos = rnd.Next(10 * 5, 15 * 5);
 
             MoveToSpawnPoint(ufos[indexPointerUfos]);
             indexPointerUfos++;
@@ -87,7 +90,7 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterRocks = 0;
-            framesUntillSpawnRocks = rnd.Next(2 * 5, 5 * 5);
+            framesUntillSpawnRocks = rnd.Next(9 * 5, 11 * 5);
 
             MoveToSpawnPoint(rocks[indexPointerRocks]);
             indexPointerRocks++;
@@ -106,9 +109,9 @@ public class ObsticalPoolManager : MonoBehaviour
         else
         {
             frameCounterPowerups = 0;
-            framesUntillSpawnPowerups = rnd.Next(2 * 5, 5 * 5);
+            framesUntillSpawnPowerups = rnd.Next(13 * 5, 18 * 5);
 
-            
+
             MoveToSpawnPoint(powerups[indexPointerPowerups]);
             indexPointerPowerups++;
             if(indexPointerPowerups > powerups.Count-1)
@@ -122,6 +125,7 @@ public class ObsticalPoolManager : MonoBehaviour
     public void MoveToHiddenPoint(GameObject _gameobj)
     {
         _gameobj.transform.position = hiddenPoolPoint;
+        _gameobj.SetActive(false);
     }
     public void MoveToSpawnPoint(GameObject _gameobj)
     {
@@ -131,6 +135,12 @@ public class ObsticalPoolManager : MonoBehaviour
 
         Vector2 spawnPoint = new Vector2(randomXPos, planePos.y + spawnYOffset);
 
+        _gameobj.SetActive(true);
         _gameobj.transform.position = spawnPoint;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       MoveToHiddenPoint(collision.gameObject);
     }
 }
