@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 55723638}
   m_Layer: 0
   m_Name: gamejam_spacejamblau
-  m_TagString: Untagged
+  m_TagString: Package
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   maxSpeed: 3
-  slidingForceMultiplier: 0.2
+  slidingForceMultiplier: 0.4
 --- !u!50 &55723639
 Rigidbody2D:
   serializedVersion: 4
@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 55723637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.947, y: -7.536, z: 0}
+  m_LocalPosition: {x: 1.17, y: -7.536, z: 0}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 203041521}
   m_Layer: 0
   m_Name: CargoBay
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   shipTag: Ship
   directDamageAmount: 1
   moveDirection: {x: 0, y: -1}
-  moveSpeed: 1
+  moveSpeed: 0.2
 --- !u!50 &812949523
 Rigidbody2D:
   serializedVersion: 4
@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 821233569}
   m_Layer: 0
   m_Name: gamejam_spacejamgelb
-  m_TagString: Untagged
+  m_TagString: Package
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,7 +1244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   maxSpeed: 3
-  slidingForceMultiplier: 0.2
+  slidingForceMultiplier: 0.4
 --- !u!50 &821233570
 Rigidbody2D:
   serializedVersion: 4
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 1155101642}
   m_Layer: 0
   m_Name: gamejam_spacejamrot
-  m_TagString: Untagged
+  m_TagString: Package
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1606,7 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   maxSpeed: 3
-  slidingForceMultiplier: 0.2
+  slidingForceMultiplier: 0.4
 --- !u!50 &1155101643
 Rigidbody2D:
   serializedVersion: 4
@@ -2355,7 +2355,7 @@ MonoBehaviour:
   shipTag: Ship
   directDamageAmount: 1
   moveDirection: {x: 0, y: -1}
-  moveSpeed: 1
+  moveSpeed: 0.2
 --- !u!50 &1264703179
 Rigidbody2D:
   serializedVersion: 4
@@ -2398,7 +2398,7 @@ GameObject:
   - component: {fileID: 1540692681}
   m_Layer: 0
   m_Name: gamejam_spacejamgrun
-  m_TagString: Untagged
+  m_TagString: Package
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2417,7 +2417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   maxSpeed: 3
-  slidingForceMultiplier: 0.2
+  slidingForceMultiplier: 0.4
 --- !u!50 &1540692682
 Rigidbody2D:
   serializedVersion: 4
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipTag: Ship
   moveDirection: {x: 0, y: -1}
-  moveSpeed: 1
+  moveSpeed: 0.2
 --- !u!50 &2043945631
 Rigidbody2D:
   serializedVersion: 4
