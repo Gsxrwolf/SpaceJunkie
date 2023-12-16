@@ -13,12 +13,21 @@ public class MainMenuScript : MonoBehaviour
         
         Button buttonClose = root.Q<Button>("buttonCloseGame");
         buttonClose.clicked += CloseGame;
+        
+        Button buttonScoreboard = root.Q<Button>("buttonScoreBoard");
+        buttonScoreboard.clicked += Scoreboard;
     }
     
     private void StartGame()
     {
         Debug.Log("Start Game");
         SceneManager.LoadScene(1);
+    }
+    
+    private void Scoreboard()
+    {
+        Debug.Log("Scoreboard");
+        SceneManager.LoadScene(3);
     }
     
     private void CloseGame()
