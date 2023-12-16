@@ -14,8 +14,6 @@ public class ObsticalPoolManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
-
     }
 
     System.Random rnd = new System.Random();
