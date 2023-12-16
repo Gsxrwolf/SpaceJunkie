@@ -6,19 +6,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
-    public bool IsPaused;
-    private int PlayerHealth;
-    private bool PlayerShield;
-    
-    private int PlayerScore;
-    private bool GameLevel = false;
-    
-    [SerializeField] private int AfterFixUpdateTicks = 5;
-    private int AfterFixUpdateTicksCounter = 0;
-
-    private float XValueOfSpaceship;
-    
     private void Awake()
     {
         if (Instance != null)
@@ -29,7 +16,22 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this);
     }
+
+    public bool IsPaused;
+    private int PlayerHealth;
+    private bool PlayerShield;
     
+    private bool GameLevel = false;
+    
+    [SerializeField] private int AfterFixUpdateTicks = 5;
+    private int AfterFixUpdateTicksCounter = 0;
+
+    private float XValueOfSpaceship;
+
+    private int PlayerScore;
+    public List<float> scoreboard = new List<float>();
+    public List<float> scoreBuffer = new List<float>();
+
     public void OnLevelWasLoaded(int _level)
     {
         if (_level == 1)
@@ -38,6 +40,11 @@ public class GameManager : MonoBehaviour
             this.PlayerHealth = 3;
             this.PlayerShield = true;
             this.PlayerScore = 0;
+        }
+        if(_level == 2)
+        {
+            scoreBuffer.Add(PlayerScore);
+            PlayerScore = 0;
         }
     }
 
