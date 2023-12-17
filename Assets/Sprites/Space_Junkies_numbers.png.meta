@@ -126,12 +126,12 @@ TextureImporter:
       name: Space_Junkies_numbers_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 500
-        height: 500
+        x: 155
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Space_Junkies_numbers_1
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 500
-        height: 500
+        x: 636
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Space_Junkies_numbers_2
       rect:
         serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 500
-        height: 500
+        x: 1156
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Space_Junkies_numbers_3
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 0
-        width: 500
-        height: 500
+        x: 1655
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: Space_Junkies_numbers_4
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 500
-        height: 500
+        x: 2154
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Space_Junkies_numbers_5
       rect:
         serializedVersion: 2
-        x: 2500
-        y: 0
-        width: 500
-        height: 500
+        x: 2655
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: Space_Junkies_numbers_6
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 0
-        width: 500
-        height: 500
+        x: 3155
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: Space_Junkies_numbers_7
       rect:
         serializedVersion: 2
-        x: 3500
-        y: 0
-        width: 500
-        height: 500
+        x: 3656
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: Space_Junkies_numbers_8
       rect:
         serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 500
-        height: 500
+        x: 4155
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Space_Junkies_numbers_9
       rect:
         serializedVersion: 2
-        x: 4500
-        y: 0
-        width: 500
-        height: 500
+        x: 4655
+        y: 125
+        width: 190
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

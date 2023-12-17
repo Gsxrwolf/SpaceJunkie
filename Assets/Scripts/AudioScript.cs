@@ -11,6 +11,12 @@ public class AudioScript : MonoBehaviour
     {
         HealthSystem ownHealthSystem = GetComponent<HealthSystem>();
 
+        if (ownHealthSystem == null)
+        {
+            this.DauerFlugAudioSource.Play();
+            return;
+        }
+
         if (ownHealthSystem.GetHealth() != 0)
         {
             if (!this.DauerFlugAudioSource.isPlaying)

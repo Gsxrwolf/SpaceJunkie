@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +13,9 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private AudioSource explosionSound;
 
     [SerializeField] private ShieldActivator ShieldActivator;
+    
+    [SerializeField] private GameObject DeathScreen;
+    [SerializeField] private NumberToImage NumberToImage;
     
     private void Awake()
     {
@@ -48,6 +53,7 @@ public class HealthSystem : MonoBehaviour
         {
             this.Health = 0;
             explosionSound.Play();
+            GameManager.Instance.StopScore();
             Invoke("LoadDeathScene", 3);
         }
 
@@ -55,7 +61,9 @@ public class HealthSystem : MonoBehaviour
     }
     void LoadDeathScene()
     {
-        SceneManager.LoadScene(2); // load death scene
+        //SceneManager.LoadScene(2);
+        this.DeathScreen.SetActive(true);
+        this.NumberToImage.SetScoreNumber();
     }
     // 0 - MainMenu
     // 1 - MainGame

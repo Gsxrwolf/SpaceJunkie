@@ -16,6 +16,12 @@ public class HeartManager : MonoBehaviour
         this.HeartTwoContainer = root.Q<Button>("HeartTwo");
         this.HeartThreeContainer = root.Q<Button>("HeartThree");
         this.ShieldContainer = root.Q<Button>("Shield");
+        
+        this.HeartOneContainer.visible = true;
+        this.HeartTwoContainer.visible = true;
+        this.HeartThreeContainer.visible = true;
+        this.ShieldContainer.visible = false;
+        
     }
 
     private void FixedUpdate()

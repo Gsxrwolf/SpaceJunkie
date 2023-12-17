@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class FlyAnimation : MonoBehaviour
 {
-    [SerializeField] private GameObject CargoBay;
+    [SerializeField] private GameObject CargoBayIntro;
     private Action Callback;
 
     private bool PlayIntro;
@@ -62,33 +62,33 @@ public class FlyAnimation : MonoBehaviour
     
     private void IntroAnimation()
     {
-        if (this.CargoBay.transform.position.y < -9.0f)
+        if (this.CargoBayIntro.transform.position.y < -9.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.3f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.3f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -8.0f)
+        if (this.CargoBayIntro.transform.position.y <= -8.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.25f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.25f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -7.0f)
+        if (this.CargoBayIntro.transform.position.y <= -7.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.2f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.2f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -6.0f)
+        if (this.CargoBayIntro.transform.position.y <= -6.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.15f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.15f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -5.0f)
+        if (this.CargoBayIntro.transform.position.y <= -5.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.1f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.1f, 0);
             return;
         }
 
@@ -97,33 +97,33 @@ public class FlyAnimation : MonoBehaviour
 
     private void IntroAnimation(Action _callback)
     {
-        if (this.CargoBay.transform.position.y < -9.0f)
+        if (this.CargoBayIntro.transform.position.y < -9.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.3f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.3f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -8.0f)
+        if (this.CargoBayIntro.transform.position.y <= -8.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.25f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.25f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -7.0f)
+        if (this.CargoBayIntro.transform.position.y <= -7.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.2f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.2f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -6.0f)
+        if (this.CargoBayIntro.transform.position.y <= -6.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.15f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.15f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -5.0f)
+        if (this.CargoBayIntro.transform.position.y <= -5.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.1f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.1f, 0);
             return;
         }
 
@@ -135,33 +135,33 @@ public class FlyAnimation : MonoBehaviour
     { 
         this.PlayIntro = false;
         
-        if (this.CargoBay.transform.position.y < -4.0f)
+        if (this.CargoBayIntro.transform.position.y < -4.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.1f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.1f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -3.0f)
+        if (this.CargoBayIntro.transform.position.y <= -3.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.15f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.15f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -2.0f)
+        if (this.CargoBayIntro.transform.position.y <= -2.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.2f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.2f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= -1.0f)
+        if (this.CargoBayIntro.transform.position.y <= -1.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.25f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.25f, 0);
             return;
         }
 
-        if (this.CargoBay.transform.position.y <= 10.0f)
+        if (this.CargoBayIntro.transform.position.y <= 10.0f)
         {
-            this.CargoBay.transform.position = this.CargoBay.transform.position + new Vector3(0, 0.30f, 0);
+            this.CargoBayIntro.transform.position = this.CargoBayIntro.transform.position + new Vector3(0, 0.30f, 0);
             return;
         }
         

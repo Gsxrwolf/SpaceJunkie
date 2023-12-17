@@ -104,6 +104,9 @@ public class GameManager : MonoBehaviour
     {
         return this.XValueOfSpaceship;
     }
-
-
+    
+    public void StopScore()
+    {
+        this.GameLevel = false;
+    }
 }
