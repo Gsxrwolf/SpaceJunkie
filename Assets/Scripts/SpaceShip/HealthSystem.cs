@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Ping = UnityEngine.Ping;
 
 public class HealthSystem : MonoBehaviour
 {
