@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int AfterFixUpdateTicks = 5;
     private int AfterFixUpdateTicksCounter = 0;
 
-    private float XValueOfSpaceship;
+    private float XValueOfSpaceship = 0.0f;
 
     private int PlayerScore;
     public List<float> scoreboard = new List<float>();

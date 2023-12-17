@@ -6,46 +6,53 @@ using UnityEngine;
 public class NumberToImage : MonoBehaviour
 {
     private int ScoreNumber;
+    [SerializeField] private bool useGameManagerCurScore;
     private List<int> SingleDigits = new List<int>();
     [SerializeField] private GameObject NumberImagePrefab;
-    
+
     [SerializeField] private List<Sprite> NumberTextures = new List<Sprite>();
 
-    private void OnEnable()
+    
+    public void ConvertToImage(int _numberToPrint = 0)
     {
-        SetScoreNumber();
+        ScoreNumber = _numberToPrint;
+        if (useGameManagerCurScore)
+        {
+            SetScoreNumber();
+        }
+        if (ScoreNumber != 0)
+        {
+            FillSingleDigits();
+            SpawnNumberImages();
+        }
     }
 
     public void SetScoreNumber()
     {
         this.ScoreNumber = GameManager.Instance.GetPlayerScore();
-
-        FillSingleDigits();
     }
-    
+
     private void FillSingleDigits()
     {
         this.SingleDigits.Clear();
-        
+
         int tempScoreNumber = this.ScoreNumber;
         while (tempScoreNumber > 0)
         {
             this.SingleDigits.Add(tempScoreNumber % 10);
             tempScoreNumber /= 10;
         }
-        
-        SpawnNumberImages();
+
     }
-    
+
     private void SpawnNumberImages()
     {
-        Vector2 offset = new Vector2(400, -300);
         Vector2 offsetStep = new Vector2(-150, 0);
-        
+
         for (int i = 0; i < this.SingleDigits.Count; i++)
         {
             GameObject numberImage = Instantiate(this.NumberImagePrefab, transform);
-            numberImage.transform.localPosition = offset + offsetStep * i;
+            numberImage.transform.localPosition =  offsetStep * i;
 
             if (this.SingleDigits[i] == 0)
             {
@@ -89,6 +96,6 @@ public class NumberToImage : MonoBehaviour
             }
         }
     }
-    
-    
+
+
 }

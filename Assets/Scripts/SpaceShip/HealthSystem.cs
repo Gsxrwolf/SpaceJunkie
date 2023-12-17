@@ -63,7 +63,8 @@ public class HealthSystem : MonoBehaviour
     {
         //SceneManager.LoadScene(2);
         this.DeathScreen.SetActive(true);
-        this.NumberToImage.SetScoreNumber();
+
+        this.NumberToImage.ConvertToImage();
     }
     // 0 - MainMenu
     // 1 - MainGame

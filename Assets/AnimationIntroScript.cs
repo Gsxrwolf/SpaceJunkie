@@ -7,6 +7,7 @@ public class AnimationIntroScript : MonoBehaviour
 {
     [SerializeField] private GameObject CargoBayOriginal;
     [SerializeField] private GameObject CargoBayIntro;
+    [SerializeField] private GameObject TopShip;
 
     [SerializeField] private GameObject BluePresent;
     [SerializeField] private GameObject YellowPresent;
@@ -32,6 +33,8 @@ public class AnimationIntroScript : MonoBehaviour
         this.NotMoveableObject.SetActive(true);
         this.GameOveray.SetActive(true);
         this.ObsticlePoolManager.SetActive(true);
+
+        this.TopShip.SetActive(false);
     }
 
     // Update is called once per frame

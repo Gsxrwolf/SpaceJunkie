@@ -22,6 +22,8 @@ public class PresentMove : MonoBehaviour
     [SerializeField] private AudioSource dropSound;
     [SerializeField] private AudioSource dragSound;
 
+    [SerializeField] private LoadedCalculator loadedCalculator;
+
 
     private void Start()
     {
@@ -46,7 +48,7 @@ public class PresentMove : MonoBehaviour
         if (!isDragging)
         {
             rigitBody.drag = 2;
-            Vector2 slidingForce = LoadedCalculator.Instance.GetCalculatedSpaceshipDirection();
+            Vector2 slidingForce = loadedCalculator.GetCalculatedSpaceshipDirection();
             slidingForce.y = 0;
             rigitBody.AddForce(slidingForce * slidingForceMultiplier);
         }
