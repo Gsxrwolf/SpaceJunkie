@@ -14,10 +14,12 @@ public class ScoreBoardManager : MonoBehaviour
     private List<float> updatedScoreboard = new List<float>();
 
 
-    [SerializeField] private List<TextMeshProUGUI> scoreTextFields = new List<TextMeshProUGUI>();
+    [SerializeField] private List<NumberToImage> scoreTextFields = new List<NumberToImage>();
 
     private void Start()
     {
+        FlyAnimation flyAnimation = GetComponent<FlyAnimation>();
+        flyAnimation.PlayIntroAnimation();
         curScoreBuffer = GameManager.Instance.scoreBuffer;
         lastScoreboard = GameManager.Instance.scoreboard;
         foreach (float processedScore in curScoreBuffer)
@@ -66,7 +68,7 @@ public class ScoreBoardManager : MonoBehaviour
         updatedScoreboard.Reverse();
         for (int i = 0; i < updatedScoreboard.Count; i++)
         {
-            scoreTextFields[i].text = updatedScoreboard[i].ToString();
+            scoreTextFields[i].ConvertToImage((int)updatedScoreboard[i]);
         }
     }
 
@@ -98,6 +100,7 @@ public class ScoreBoardManager : MonoBehaviour
 
     public void BackButton()
     {
-        SceneManager.LoadScene(0);
+        FlyAnimation flyAnimation = GetComponent<FlyAnimation>();
+        flyAnimation.PlayOutroAnimation(0);
     }
 }
