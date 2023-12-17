@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: FlyAnimation
       value: 
       objectReference: {fileID: 1167365627}
+    - target: {fileID: 7949116249187014318, guid: 568ee03bd6ab10f6db352979b532641c, type: 3}
+      propertyPath: CargoBayIntro
+      value: 
+      objectReference: {fileID: 6981424062332851378}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
