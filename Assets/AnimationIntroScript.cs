@@ -36,10 +36,4 @@ public class AnimationIntroScript : MonoBehaviour
 
         this.TopShip.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

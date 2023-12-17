@@ -17,17 +17,5 @@ public class BackgroundMove : MonoBehaviour
     {
         moveDirection.x = -GameManager.Instance.GetXValueOfSpaceship() * sliderMultiplier;
         rigitbody.velocity = moveDirection.normalized * moveSpeed;
-        if (transform.position.y < -17)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y + 45);
-        }
-        if(transform.position.x > 40)
-        {
-            transform.position = new Vector3(transform.position.x - 63, transform.position.y);
-        }
-        if (transform.position.x < -40)
-        {
-            transform.position = new Vector3(transform.position.x + 63, transform.position.y);
-        }
     }
 }

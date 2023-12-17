@@ -6,20 +6,8 @@ public class MainMenuScript : MonoBehaviour
     [SerializeField] private FlyAnimation FlyAnimation;
     [SerializeField] private GameObject CargoBayIntro;
 
-    private void OnEnable()
+    private void Start()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-
-        Button buttonStart = root.Q<Button>("buttonStartGame");
-        buttonStart.clicked += StartGame;
-
-        Button buttonClose = root.Q<Button>("buttonCloseGame");
-        buttonClose.clicked += CloseGame;
-
-        Button buttonScoreboard = root.Q<Button>("buttonScoreBoard");
-        buttonScoreboard.clicked += Scoreboard;
-
-
         Invoke("StartAnimation", 0.5f);
     }
 
