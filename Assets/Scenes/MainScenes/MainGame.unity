@@ -11132,6 +11132,26 @@ PrefabInstance:
       propertyPath: explosionSound
       value: 
       objectReference: {fileID: 389165631}
+    - target: {fileID: 3462124629043497723, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462124629043497723, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690898531068224613, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138797607802329897, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1754328147, guid: a5d0e5169cdf31163b0997133dc411e3, type: 3}
+    - target: {fileID: 6194944855987233133, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5c86474ab2da9ac83bf823e4b3016559, type: 2}
     - target: {fileID: 6981424063255403844, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
       propertyPath: m_Name
       value: CargoBay

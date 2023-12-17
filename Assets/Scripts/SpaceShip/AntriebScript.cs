@@ -9,9 +9,18 @@ public class AntriebScript : MonoBehaviour
     {
         if (GameManager.Instance.GetPlayerHealth() == 0)
         {
-            SpriteRenderer ownSprite = GetComponent<SpriteRenderer>();
-            
-            ownSprite.enabled = false;
+            Animator animator = GetComponent<Animator>();
+            animator.SetBool("IsDead", true);
         }
+    }
+
+    public void DisableFlames()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        
+        spriteRenderer.enabled = false;
+        
+        Animator animator = GetComponent<Animator>();
+        animator.SetBool("IsDead", false);
     }
 }
