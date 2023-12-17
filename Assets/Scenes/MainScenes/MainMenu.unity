@@ -704,6 +704,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CargoBay
       objectReference: {fileID: 0}
+    - target: {fileID: 2597838100186477326, guid: 23cf56f61f722d9a29ea62d8507192cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597838100186477326, guid: 23cf56f61f722d9a29ea62d8507192cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338331799935826745, guid: 23cf56f61f722d9a29ea62d8507192cc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1754328147, guid: a5d0e5169cdf31163b0997133dc411e3, type: 3}
     - target: {fileID: 5508722506817989338, guid: 23cf56f61f722d9a29ea62d8507192cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
