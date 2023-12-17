@@ -11121,6 +11121,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1798048288}
     - target: {fileID: 1101394955300057590, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
+      propertyPath: Pool
+      value: 
+      objectReference: {fileID: 798959281}
+    - target: {fileID: 1101394955300057590, guid: 4bcfdcecb6cbfb5d3ae2b3831808925c, type: 3}
       propertyPath: DeathScreen
       value: 
       objectReference: {fileID: 330682276}

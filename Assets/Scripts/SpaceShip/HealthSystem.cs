@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Ping = UnityEngine.Ping;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class HealthSystem : MonoBehaviour
     
     [SerializeField] private GameObject DeathScreen;
     [SerializeField] private NumberToImage NumberToImage;
+    
+    [SerializeField] private GameObject Pool;
     
     private void Awake()
     {
@@ -54,6 +57,7 @@ public class HealthSystem : MonoBehaviour
             this.Health = 0;
             explosionSound.Play();
             GameManager.Instance.StopScore();
+            this.Pool.SetActive(false);
             Invoke("LoadDeathScene", 3);
         }
 

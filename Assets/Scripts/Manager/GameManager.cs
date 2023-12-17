@@ -109,4 +109,9 @@ public class GameManager : MonoBehaviour
     {
         this.GameLevel = false;
     }
+    
+    public bool GetGameLevel()
+    {
+        return this.GameLevel;
+    }
 }
