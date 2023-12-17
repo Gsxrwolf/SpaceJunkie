@@ -1,0 +1,48 @@
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class MainMenuScript : MonoBehaviour
+{
+    [SerializeField] private FlyAnimation FlyAnimation;
+    
+    private void OnEnable()
+    {
+        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        
+        Button buttonStart = root.Q<Button>("buttonStartGame");
+        buttonStart.clicked += StartGame;
+        
+        Button buttonClose = root.Q<Button>("buttonCloseGame");
+        buttonClose.clicked += CloseGame;
+        
+        Button buttonScoreboard = root.Q<Button>("buttonScoreBoard");
+        buttonScoreboard.clicked += Scoreboard;
+        
+        
+        Invoke("StartAnimation", 0.5f);
+    }
+
+    private void StartAnimation()
+    {
+        this.FlyAnimation.PlayIntroAnimation();  
+    }
+    
+    private void StartGame()
+    {
+        this.FlyAnimation.PlayOutroAnimation(1);
+    }
+    
+    private void Scoreboard()
+    {
+        Debug.Log("Scoreboard");
+        this.FlyAnimation.PlayOutroAnimation(3);
+    }
+    
+    private void CloseGame()
+    {
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }
+}

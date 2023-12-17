@@ -32,12 +32,6 @@ public class PresentMove : MonoBehaviour
     {
         if (isDragging)
         {
-
-            if (!dragSound.isPlaying)
-            {
-                Debug.Log(dragSound.isPlaying);
-            }
-
             rigitBody.drag = 1;
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 direction = (mousePos - transform.position).normalized;
