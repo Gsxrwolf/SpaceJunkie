@@ -1,8 +1,16 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="Container" style="flex-grow: 1; justify-content: center; align-items: center;">
-        <ui:VisualElement style="flex-grow: 1; align-items: stretch; justify-content: flex-start; align-self: center; height: 10%; width: 10%;" />
-        <ui:Button text="Start Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buttonStartGame" />
-        <ui:Button text="Close Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="buttonCloseGame" />
-        <ui:VisualElement style="flex-grow: 1;" />
+    <Style src="project://database/Assets/Prefabs/UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=15cecb0c6869923b5abd28c7fd69858c&amp;type=3#MainMenu" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; align-items: auto; justify-content: flex-start; align-self: auto; width: 100%; height: 100%; background-image: none; opacity: 1;">
+        <ui:VisualElement name="Titel" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Sprites/Space_junkies_title.png?fileID=2800000&amp;guid=8d1729690ac5cbd628d4d1b062b270c3&amp;type=3#Space_junkies_title&apos;); align-items: center; justify-content: space-between; align-self: center; width: 100%; height: 45%; max-height: 45%; padding-bottom: 0; margin-bottom: -30%;" />
+        <ui:VisualElement name="ButtonOne" style="flex-grow: 1; align-items: center; justify-content: flex-start; align-self: center; min-width: 37%; min-height: 5px; margin-bottom: 0; width: 37%; height: 5px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="buttonStartGame" style="background-image: url(&apos;project://database/Assets/Sprites/Space_junkies_start.png?fileID=2800000&amp;guid=9dc07493492dc135fb307ee2fcd7c7eb&amp;type=3#Space_junkies_start&apos;); background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); width: 100%; height: 100%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonTwo" style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0); background-color: rgba(0, 0, 0, 0); min-width: 37%; min-height: 5px; margin-bottom: 0; width: 37%; height: 5px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="buttonScoreBoard" style="background-image: url(&apos;project://database/Assets/Sprites/Space_junkies_score.png?fileID=2800000&amp;guid=84cdffb2d808536c595fc2a1c909f8ce&amp;type=3#Space_junkies_score&apos;); width: 100%; height: 100%; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ButtonThree" style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; min-width: 37%; min-height: 5px; margin-bottom: 0; width: 37%; height: 5px;">
+            <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="buttonCloseGame" style="width: 100%; height: 100%; background-color: rgba(188, 188, 188, 0); border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0); background-image: url(&apos;project://database/Assets/Sprites/Space_junkies_quit.png?fileID=2800000&amp;guid=b95b0ce94ce51d766b8100cdfbbc800b&amp;type=3#Space_junkies_quit&apos;);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: 35%;" />
     </ui:VisualElement>
 </ui:UXML>
