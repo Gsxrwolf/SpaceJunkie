@@ -25,6 +25,8 @@ public class HealthSystem : MonoBehaviour
     
     public void SetShieldActive()
     {
+        if (this.Health <= 0) return;
+        
         this.ShieldActive = true;
         
         GameManager.Instance.SetPlayerShield(this.ShieldActive);

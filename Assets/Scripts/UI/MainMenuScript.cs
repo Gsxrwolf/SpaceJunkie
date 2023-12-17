@@ -1,9 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MainMenuScript : MonoBehaviour
 {
+    [SerializeField] private FlyAnimation FlyAnimation;
+    
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -16,18 +17,25 @@ public class MainMenuScript : MonoBehaviour
         
         Button buttonScoreboard = root.Q<Button>("buttonScoreBoard");
         buttonScoreboard.clicked += Scoreboard;
+        
+        
+        Invoke("StartAnimation", 0.5f);
+    }
+
+    private void StartAnimation()
+    {
+        this.FlyAnimation.PlayIntroAnimation();  
     }
     
     private void StartGame()
     {
-        Debug.Log("Start Game");
-        SceneManager.LoadScene(1);
+        this.FlyAnimation.PlayOutroAnimation(1);
     }
     
     private void Scoreboard()
     {
         Debug.Log("Scoreboard");
-        SceneManager.LoadScene(3);
+        this.FlyAnimation.PlayOutroAnimation(3);
     }
     
     private void CloseGame()

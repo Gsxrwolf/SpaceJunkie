@@ -22,7 +22,6 @@ public class HeartManager : MonoBehaviour
     {
         int health = GameManager.Instance.GetPlayerHealth();
         bool shield = GameManager.Instance.GetPlayerShield();
-        Debug.Log(health);
 
         this.ShieldContainer.visible = shield;
 

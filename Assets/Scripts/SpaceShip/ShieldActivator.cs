@@ -21,7 +21,6 @@ public class ShieldActivator : MonoBehaviour
         shieldRenderer.enabled = true;
         
         this.SpaceShipAnimator.SetBool("IsShieldActive", true);
-        Debug.Log("Shield enabled");
     }
     
     public void SetShieldActive()
@@ -32,7 +31,6 @@ public class ShieldActivator : MonoBehaviour
     public void DisableShield()
     {
         this.SpaceShipAnimator.SetBool("IsShieldActive", false);
-        Debug.Log("Shield disabled");
     }
 
     public void DisableShieldRenderer()

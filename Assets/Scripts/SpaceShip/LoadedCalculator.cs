@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.Rendering.ReloadAttribute;
 
 public class LoadedCalculator : MonoBehaviour
 {
@@ -81,12 +76,17 @@ public class LoadedCalculator : MonoBehaviour
         }
         xPosition /= this.SpaceshipWidth;
 
-        CalculatedSpaceshipDirection.x = xPosition;
+        this.CalculatedSpaceshipDirection.x = xPosition;
 
         this.CalculatedMassLeftSide = 0.0f;
         this.CalculatedMassRightSide = 0.0f;
 
         GameManager.Instance.SetXValueOfSpaceship(this.CalculatedSpaceshipDirection.x);
+    }
+
+    private void CalculateCORRECTSpaceshipMassPoint()
+    {
+        float calculatetDifferenceMass = this.CalculatedMassLeftSide - this.CalculatedMassRightSide;
     }
 
     private void CalculateSpaceShipDirection()
