@@ -9,37 +9,37 @@ public class MainMenuScript : MonoBehaviour
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-        
+
         Button buttonStart = root.Q<Button>("buttonStartGame");
         buttonStart.clicked += StartGame;
-        
+
         Button buttonClose = root.Q<Button>("buttonCloseGame");
         buttonClose.clicked += CloseGame;
-        
+
         Button buttonScoreboard = root.Q<Button>("buttonScoreBoard");
         buttonScoreboard.clicked += Scoreboard;
-        
-        
+
+
         Invoke("StartAnimation", 0.5f);
     }
 
     private void StartAnimation()
     {
-        this.FlyAnimation.PlayIntroAnimation();  
+        this.FlyAnimation.PlayIntroAnimation();
     }
-    
-    private void StartGame()
+
+    public void StartGame()
     {
         this.FlyAnimation.PlayOutroAnimation(1);
     }
-    
-    private void Scoreboard()
+
+    public void Scoreboard()
     {
         Debug.Log("Scoreboard");
         this.FlyAnimation.PlayOutroAnimation(3);
     }
-    
-    private void CloseGame()
+
+    public void CloseGame()
     {
         if (this.CargoBayIntro.transform.position.y < -4.0f)
         {
@@ -72,8 +72,8 @@ public class MainMenuScript : MonoBehaviour
         }
 
         Application.Quit();
-        #if UNITY_EDITOR
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
     }
 }

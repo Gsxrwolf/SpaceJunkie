@@ -3,25 +3,18 @@ using UnityEngine.UIElements;
 
 public class HeartManager : MonoBehaviour
 {
-    private Button HeartOneContainer;
-    private Button HeartTwoContainer;
-    private Button HeartThreeContainer;
-    private Button ShieldContainer;
-    
-    private void OnEnable()
+    [SerializeField] private GameObject HeartOneContainer;
+    [SerializeField] private GameObject HeartTwoContainer;
+    [SerializeField] private GameObject HeartThreeContainer;
+    [SerializeField] private GameObject ShieldContainer;
+
+    private void Start()
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
-        
-        this.HeartOneContainer = root.Q<Button>("HeartOne");
-        this.HeartTwoContainer = root.Q<Button>("HeartTwo");
-        this.HeartThreeContainer = root.Q<Button>("HeartThree");
-        this.ShieldContainer = root.Q<Button>("Shield");
-        
-        this.HeartOneContainer.visible = true;
-        this.HeartTwoContainer.visible = true;
-        this.HeartThreeContainer.visible = true;
-        this.ShieldContainer.visible = false;
-        
+        this.HeartOneContainer.SetActive(true);
+        this.HeartTwoContainer.SetActive(true);
+        this.HeartThreeContainer.SetActive(true);
+        this.ShieldContainer.SetActive(false);
+
     }
 
     private void FixedUpdate()
@@ -29,18 +22,18 @@ public class HeartManager : MonoBehaviour
         int health = GameManager.Instance.GetPlayerHealth();
         bool shield = GameManager.Instance.GetPlayerShield();
 
-        this.ShieldContainer.visible = shield;
+        this.ShieldContainer.SetActive(shield);
 
         switch (health)
         {
             case 2:
-                this.HeartThreeContainer.visible = false;
+                this.HeartThreeContainer.SetActive(false);
                 break;
             case 1:
-                this.HeartTwoContainer.visible = false;
+                this.HeartTwoContainer.SetActive(false);
                 break;
             case 0:
-                this.HeartOneContainer.visible = false;
+                this.HeartOneContainer.SetActive(false);
                 break;
         }
     }
