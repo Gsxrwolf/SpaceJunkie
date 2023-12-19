@@ -24,7 +24,7 @@ public class MainMenuScript : MonoBehaviour
     public void Scoreboard()
     {
         Debug.Log("Scoreboard");
-        this.FlyAnimation.PlayOutroAnimation(3);
+        this.FlyAnimation.PlayOutroAnimation(2);
     }
 
     public void CloseGame()

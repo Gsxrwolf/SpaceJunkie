@@ -224,12 +224,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6981424062332851378}
     - target: {fileID: 6088541421500504477, guid: 568ee03bd6ab10f6db352979b532641c, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6088541421500504477, guid: 568ee03bd6ab10f6db352979b532641c, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 3500
       objectReference: {fileID: 0}
     - target: {fileID: 6088541421500504477, guid: 568ee03bd6ab10f6db352979b532641c, type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 102.94
+      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScenes/MainGame.unity
     guid: 5a5cc973049a9c14198802e5ed380122
   - enabled: 1
-    path: Assets/Scenes/MainScenes/MainDeath.unity
-    guid: 41ac993c4bd56894fa375dc724020f17
-  - enabled: 1
     path: Assets/Scenes/MainScenes/MainScoreBoard.unity
     guid: 3b502f15c01ef3e4393f24aa402153b2
   m_configObjects:
