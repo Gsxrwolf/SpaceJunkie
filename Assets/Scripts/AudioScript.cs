@@ -13,7 +13,10 @@ public class AudioScript : MonoBehaviour
 
         if (ownHealthSystem == null)
         {
-            this.DauerFlugAudioSource.Play();
+            if (!this.DauerFlugAudioSource.isPlaying)
+            {
+                this.DauerFlugAudioSource.Play();
+            }
             return;
         }
 
